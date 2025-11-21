@@ -33,6 +33,8 @@
                     </li>
                     <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
                     <!-- Note: When copying this dropdown, update the id attribute with an appropriate name (e.g., "services-dropdown-toggle", "products-dropdown-toggle") and ensure the aria-labelledby attribute on the ul matches the button's id -->
+
+                    <!--
                     <li class="cs-li cs-dropdown">
                         <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/project-one/" or page.url == "/project-two/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="projects-dropdown-toggle">
                             Projects
@@ -47,25 +49,54 @@
                             </li>
                         </ul>
                     </li>
+                     -->
+                    <li class="cs-li">
+                        <a href="/services/" class="cs-li-link {% if page.url == "/services/" %} cs-active {% endif %}" {% if page.url == "/services/" %} aria-current="page" {% endif %}>
+                        Services
+                        </a>
+                    </li>
                     <li class="cs-li">
                         <a href="/reviews/" class="cs-li-link {% if page.url == "/reviews/" %} cs-active {% endif %}" {% if page.url == "/reviews/" %} aria-current="page" {% endif %}>
                             Reviews
                         </a>
                     </li>
                     <li class="cs-li">
+                        <a href="/faq/" class="cs-li-link {% if page.url == "/faq/" %} cs-active {% endif %}" {% if page.url == "/faq/" %} aria-current="page" {% endif %}>
+                        FAQ
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}" {% if page.url == "/contact/" %} aria-current="page" {% endif %}>
+                        Contact Us
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="https://alemspa.org/" class="cs-li-link" >
+                        Membership
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="/giftcard/" class="cs-li-link {% if page.url == "/giftcard/" %} cs-active {% endif %}" {% if page.url == "/giftcard/" %} aria-current="page" {% endif %}>
+                        Gift Cards
+                        </a>
+                    </li>
+                    <!--
+                    <li class="cs-li">
                         <a href="/blog/" class="cs-li-link {% if page.url == "/blog/" %} cs-active {% endif %}" {% if page.url == "/blog/" %} aria-current="page" {% endif %}>
                             Blog
                         </a>
                     </li>
+                    -->
+
                     <li class="cs-li cs-hide-on-desktop">
-                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}" {% if page.url == "/contact/" %} aria-current="page" {% endif %}>
-                            Contact
+                        <a href="/booking/" class="cs-li-link {% if page.url == "/booking/" %} cs-active {% endif %}" {% if page.url == "/booking/" %} aria-current="page" {% endif %}>
+                            Booking
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <a href="/contact/" class="cs-button-solid cs-nav-button">Contact Us</a>
+        <a href="/booking/" class="cs-button-solid cs-nav-button">Book Now</a>
         <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
         <button id="dark-mode-toggle" aria-label="dark mode toggle" aria-pressed="false">
             <img class="cs-moon" aria-hidden="true" src="/assets/svgs/moon.svg" decoding="async" alt="" width="15" height="15">
