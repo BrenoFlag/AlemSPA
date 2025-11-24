@@ -15,14 +15,164 @@ permalink: "/about/"
 {% block body %}
 
 
-    <section id="page-heading">
-        <div class="cs-container">
-            <div class="cs-content">
-                <h1 class="cs-title">About Our Spa</h1>
+<!-- ============================================ -->
+<!--                     Hero                     -->
+<!-- ============================================ -->
+
+<section id="hero-2153">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Perfect Photography at Your Doorstep</span>
+                <h2 class="cs-title">Make Your Wedding Dream Come True</h2>
+            </div>
+            <p class="cs-text">Authentic wedding photography emphasizes candid shots that capture real emotions, reactions, and interactions among the couple, their families, and guests. These moments are often spontaneous and heartfelt.</p>
+        </div>
+        <div class="cs-video-group">
+            <div class="cs-video-wrapper">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1200, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1200, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1200, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <!--Tablet Image-->
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1720, height: 547 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1720, height: 547 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1720, height: 547 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1720, height: 547 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1720, height: 547 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1720, height: 547 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/jpg/ingredients.jpg" | resize({ width: 1720, height: 547 }) | jpeg %}" alt="library" width="1720" height="547" loading="eager" decoding="async">
+
+    <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding6.jpeg" alt="wedding" width="1720" height="547">
+                </picture>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    {% include 'sections/cta.html' %}
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2369">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/png/alemHeadshot1.png" | resize({ width: 565, height: 814 }) | jpeg %}" alt="library" width="565" height="814" loading="eager" decoding="async">
+      </picture>
+            <img class="cs-flower" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/flower-blur.svg" alt="flower blur" width="635" height="697">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Who We Are</span>
+            <h2 class="cs-title">Transforming Therapy, Elevating Lives</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit esse deleniti recusandae suscipit voluptatum eveniet provident repudiandae, sequi cum ipsa incidunt quisquam ipsam? Temporibus nihil eligendi illum quos tempora delectus inventore dolore repudiandae perspiciatis voluptatum, adipisci placeat, ducimus dolorem consequuntur?
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                    Digital Solutions Provider Agency
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                    Unicode, UTF8 & Character Sets The Ultimate Guide
+                </li>
+                <li class="cs-li">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg" alt="checkmark" width="24" height="24">
+                    WordPress Guides For The Advanced Beginner
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">Man An Appointment</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1981">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Dental Care For Everyone</span>
+            <h2 class="cs-title">Smiles More Radiant and Healthy is Our Passion</h2>
+            <p class="cs-text-large">
+                Enthusiastically supply parallel convergence after high standards in e-markets. Progressively administrate fully researched partnerships and market positioning web-readiness. Credibly scale an expanded.
+            </p>
+            <p class="cs-text">
+                Orci eu lobortis elementum nibh tellus. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Luctus accumsan tortor posuere ac ut consequat semper. Et pharetra pharetra massa massa ultricies mi quis.
+            </p>
+            <a href="" class="cs-button-solid">Get Started</a>
+            <div class="cs-ratings">
+                <div class="cs-stars">
+                    <img class="cs-star" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                    <img class="cs-star" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/green-star.svg" alt="star" width="24" height="24" aria-hidden="true">
+                </div>
+                <div class="cs-rating">
+                    <h3 class="cs-h3">99.99% Customer Satisfaction</h3>
+                    <p class="cs-rating-text">
+                        based on 750+ reviews of 6,154 completed projects
+                    </p>
+                </div>
+                <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dentist-tooth.svg" alt="star" width="20" height="20">
+            </div>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/staff-smiling.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/staff-smiling.jpeg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/staff-smiling.jpeg" alt="staff member smiling" width="630" height="680">
+            </picture>
+            <div class="cs-box">
+                <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/teal-users.svg" alt="people" width="60" height="60">
+                <span class="cs-desc">
+                    24,000+
+                </span>
+                <p class="cs-box-text">
+                    Patients served and bring back their happy smile
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================================ -->
+<!--                  Content                     -->
+<!-- ============================================ -->
+
+<section id="content-1450">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">ABOUT US</span>
+            <h2 class="cs-title">Stitch Non-profit Charity is the largest global crowdfunding community in the world</h2>
+            <p class="cs-text">
+                Proactively procrastinate cross-platform results via extensive ideas distinctively underwhelm enterprise. Compellingly plagiarize value-added sources with inexpensive schemas. The school provides the best possible education and practical training necessary for those who wish to pursue a career in music, as well as for music-loving children whose aims are non-professional.
+            </p>
+            <a href="" class="cs-button-solid">Read Our History</a>
+        </div>
+    </div>
+</section>
+
+
+{% include 'sections/cta.html' %}
 
 {% endblock %}
