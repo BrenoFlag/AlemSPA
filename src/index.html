@@ -158,10 +158,6 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Flandscape1.jpg">
                 <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FLandscapes%2Flandscape1.jpg" alt="landscape" width="562" height="568">
             </picture>
-            <!--Pink Blob-->
-            <img class="cs-graphic1" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fpink-blob.svg" alt="pink graphic" width="441" height="478">
-            <!--Flower Graphic-->
-            <img class="cs-graphic2" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fabstract-flower.svg" alt="abstract flower" width="267" height="130">
         </div>
         <div class="cs-content">
             <span class="cs-topper">About Us</span>
@@ -349,20 +345,23 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <div class="cs-promotion">
             <div class="cs-flex">
                 <!--Limited Offer-->
-                <img class="cs-offer" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/limited-offer.png" decoding="async" alt="quote icon" width="189" height="90">
-                <h3 class="cs-h3-offer">The Beginners Guide To Camping</h3>
-                <a href="" class="cs-link">Explore Now</a>
+                    <a href="" class="cs-link">Explore Now</a>
             </div>
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)"
-                        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"/>
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)"
-                        srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png"/>
-                <img loading="lazy" decoding="async"
-                     src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hoodies.png" alt="kids"
-                     width="220" height="220" aria-hidden="true"/>
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 440, height: 440 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/jpg/giftCardHero.jpg" | resize({ width: 800, height: 220 }) | jpeg %}" alt="library" width="800" height="220" loading="eager" decoding="async">
+
             </picture>
         </div>
         <ul class="cs-card-group">

@@ -567,9 +567,13 @@
             /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
             width: (665/16em);
             height: (842/16em);
-            margin-left: auto;
+            margin: 0 auto;
             position: relative;
             z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         .cs-picture {
@@ -579,9 +583,8 @@
             /* clips the image to match the border radius of the cs-picture */
             overflow: hidden;
             display: block;
-            position: absolute;
-            right: (15/16em);
-            bottom: (32/16em);
+            position: relative;
+            margin: 0 auto;
 
             img {
                 width: 100%;
@@ -635,6 +638,14 @@
             /* set to inherit at Large Desktop */
             font-size: ~"min(1.2vw, 1em)";
             margin: 0;
+            display: block;
+            text-align: left;
+        }
+
+        .cs-picture {
+            position: absolute;
+            right: (15/16em);
+            bottom: (32/16em);
         }
 
         .cs-content {
