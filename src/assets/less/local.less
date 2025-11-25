@@ -577,6 +577,9 @@
         }
 
         .cs-picture {
+            border: 2px solid var(--color-border-soft); /* Clay Tint */
+            border-radius: 50%;  /* keep circle shape */
+
             width: (562/16em);
             height: (680/16em);
             border-radius: (285/16em);
@@ -949,6 +952,12 @@
         }
 
         .cs-item {
+
+            background-color: var(--color-bg-alt);      /* Soft Sand */
+            border: 1px solid var(--color-border-soft); /* Clay Tint */
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(58, 40, 35, 0.06); /* Cocoa Ink shadow */
+
             text-align: left;
             list-style: none;
             /* 32px - 40px top & bottom */
@@ -1228,7 +1237,7 @@
             z-index: 1;
 
             img {
-                border: 8px solid #fff;
+                border: 2px solid var(--color-border-soft);
                 position: absolute;
                 top: 0;
                 left: 0;

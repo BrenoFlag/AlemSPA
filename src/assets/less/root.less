@@ -28,12 +28,12 @@
 		--color-error: #C86A6A;        /* Rose Clay */
 		--color-highlight: #F2E8FF;    /* Incense Mist */
 
-
-
 		--hoverColor: #fff;
-
 		--headerColor: #3A2823;
-		--bodyTextColorWhite: #fff;
+
+		--headerColorWhite: #fff;
+		--bodyTextColorWhite: #F7F0E8;
+		--topperColorWhite: rgba(255, 255, 255, 0.75);
 
 		/* Dark Mode Styles */
 		--dark: #082032;
@@ -1260,7 +1260,7 @@
 		}
 
 		.cs-title {
-			color: var(--bodyTextColorWhite);
+			color: var(--headerColorWhite);
 		}
 
 		.cs-text {
@@ -1271,7 +1271,9 @@
 				margin-bottom: (32/16rem);
 			}
 		}
-
+		.cs-topper{
+			color: var(--primary);
+		}
 		.cs-picture {
 			height: 100%;
 			width: 100%;
