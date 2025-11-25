@@ -222,49 +222,71 @@
             }
 
             .cs-button-solid {
-                width: 100%;
-            }
-        }
 
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
+                background-color: transparent;
+                color: var(--bodyTextColor); /* Cocoa Ink */
+                border: 1px solid var(--primary); /* Gold */
+                border-radius: 6px;
+                display: inline-block;
+                transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 
-            &:before {
-                content: "";
-                position: absolute;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
+                font-size: (16/16rem);
+                /* 46px - 56px */
+                line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+                text-decoration: none;
+                font-weight: 700;
+                text-align: center;
+                margin: 0;
+                min-width: (150/16rem);
+                padding: 0 (24/16rem);
                 border-radius: (4/16rem);
-                transition: width 0.3s;
-            }
+                position: relative;
+                z-index: 1;
+                /* prevents padding from adding to the width */
+                box-sizing: border-box;
 
-            &:hover {
                 &:before {
-                    width: 100%;
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 0%;
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    border-radius: (4/16rem);
+                    transition: width 0.3s;
+                }
+
+                &:hover,
+                .btn-secondary:focus {
+                    background-color: var(--color-bg-alt); /* Soft Sand */
+                    color: var(--secondary); /* Plum */
+                    border-color: var(--secondary); /* Plum on hover */
+
+                    &:before {
+                        width: 100%;
+                    }
                 }
             }
+
+            cs-button-solid:active {
+                background-color: #F3EBE0; /* Slightly darker sand */
+                color: var(--secondary);
+                border-color: var(--secondary);
+            }
+
+            cs-button-solid:disabled {
+                border-color: var(--color-border-soft); /* Clay tint */
+                color: var(--bodyTextColorMuted);
+                cursor: not-allowed;
+            }
+
+
+
         }
+
+
 
         .cs-submit {
             width: 100%;
