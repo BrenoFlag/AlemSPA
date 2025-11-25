@@ -5,6 +5,7 @@
 // should go into root.less
 // ─────────────────────────────────────────────────────────────────────────────
 
+
 /*-- -------------------------- -->
 <---            Hero            -->
 <--- -------------------------- -*/
@@ -218,154 +219,61 @@
         }
     }
 }
+
 /*-- -------------------------- -->
-<---        Side By Side        -->
+<---       Side By Side         -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #sbs-2369 {
+    #sbs-2179 {
         padding: var(--sectionPadding);
-        padding-bottom: 0;
         background-color: #FBF5F1;
-        /* clips anything overflowing */
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
 
         .cs-container {
             width: 100%;
-            /* changes to 1280px at desktop */
-            max-width: (784/16rem);
+            max-width: (584/16rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-wrapper {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            gap: clamp(3rem, 7vw, 4rem);
         }
 
         .cs-content {
-            /* set text align to center if content needs to be centered */
+            /* set text align to left if content needs to be left aligned */
             text-align: left;
             width: 100%;
-            max-width: (694/16rem);
-            overflow: hidden;
+            max-width: (775/16rem);
+            /* prevents padding from affecting width and height */
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            /* left aligns content, set to center to align content horizontally */
+            /* centers content horizontally, set to flex-start to left align */
             align-items: flex-start;
-        }
-
-        .cs-header {
-            /* 20px - 31px */
-            font-size: clamp(1.25rem, 3vw, 1.9375rem);
-            text-align: center;
-            line-height: 1.2em;
-            font-weight: 700;
-            margin: 0 0 (32/16rem) 0;
-            color: var(--headerColor);
-        }
-
-        .cs-arrow {
-            width: (154/16rem);
-            height: auto;
-            margin-bottom: (20/16rem);
-            display: block;
-        }
-
-        .cs-topper {
-            text-align: center;
-            margin: auto;
-        }
-
-        .cs-title {
-            text-align: center;
-            max-width: 20ch;
-            margin: auto;
-            margin-bottom: (32/16rem);
-            /* 48px - 64px */
-            padding-bottom: clamp(3rem, 6vw, 4rem);
-            position: relative;
-            z-index: 1;
-
-            &:before {
-                content: '';
-                width: 100vw;
-                height: 1px;
-                background: #D2D8DF;
-                opacity: 1;
-                display: block;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
         }
 
         .cs-text {
+            max-width: 100%;
             margin-bottom: (16/16rem);
-
             &:last-of-type {
-                /* 24px - 32px */
-                margin-bottom: clamp(1.5rem, 3vw, 2rem);
+                margin-bottom: (32/16rem);
             }
-        }
-
-        .cs-ul {
-            width: 100%;
-            margin: 0 0 (32/16rem);
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: (12/16rem);
-        }
-
-        .cs-li {
-            font-size: var(--bodyFontSize);
-            list-style: none;
-            line-height: 1.5em;
-            width: 100%;
-            color: var(--bodyTextColor);
-            display: flex;
-            justify-content: flex-start;
-            /* push icon top the top so if the list item goes to two lines the icon stays at the top */
-            align-items: flex-start;
-            gap: (8/16rem);
-        }
-
-        .cs-icon {
-            width: (19/16rem);
-            height: auto;
-            /* adds extra space between the icon and top of parent so it's more centered */
-            margin-top: 3px;
-            display: block;
-            flex: none;
         }
 
         .cs-button-solid {
             font-size: (16/16rem);
             /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
             text-decoration: none;
             font-weight: 700;
             text-align: center;
             margin: 0;
             color: #fff;
-            overflow: hidden;
             min-width: (150/16rem);
             padding: 0 (24/16rem);
             background-color: var(--primary);
-            border-radius: (100/16rem);
             display: inline-block;
             position: relative;
             z-index: 1;
@@ -373,7 +281,7 @@
             box-sizing: border-box;
 
             &:before {
-                content: '';
+                content: "";
                 position: absolute;
                 height: 100%;
                 width: 0%;
@@ -382,8 +290,7 @@
                 top: 0;
                 left: 0;
                 z-index: -1;
-                border-radius: (4/16rem);
-                transition: width .3s;
+                transition: width 0.3s;
             }
 
             &:hover {
@@ -393,106 +300,112 @@
             }
         }
 
-
-        .cs-image-group {
-            /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
-            font-size:~"min(2.8vw, .75rem)";
-            /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
-            width: (522/16em);
-            height: auto;
-            order: 2;
-            position: relative;
-            z-index: 1;
-        }
-
         .cs-picture {
             width: 100%;
-            height: auto;
             display: block;
+            position: relative;
+            z-index: 1;
 
             img {
+                border: 8px solid #fff;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
                 width: 100%;
-                height: auto;
-                display: block;
+                object-fit: cover;
             }
         }
 
-        .cs-flower {
-            width: (1200/16em);
-            height: auto;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            z-index: -1;
-            transform: translateX(-50%);
+        .cs-picture1 {
+            width: 90%;
+            height: 104vw;
+            max-height: (500/16rem);
+
+            &:before {
+                content: '';
+                width: 97%;
+                height: 97%;
+                border: 2px solid var(--primary);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+                transform: translate(-50%, -50%) rotate(-5.9deg);
+                transform-origin: center;
+            }
+        }
+
+        .cs-picture2 {
+            width: 93%;
+            height: 57vw;
+            max-height: (360/16rem);
+            margin: (48/16rem) auto 0;
+
+            &:before {
+                content: '';
+                width: 97%;
+                height: 97%;
+                border: 2px solid var(--primary);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 50%;
+                z-index: -1;
+                transform: translate(-50%, -50%) rotate(-11.35deg);
+                transform-origin: center;
+            }
         }
     }
 }
 
-/* Large Desktop - 1200px */
-@media only screen and (min-width: 75rem) {
-    #sbs-2369 {
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #sbs-2179 {
         padding: var(--sectionPadding);
-        padding-bottom: 0;
 
         .cs-container {
             max-width: (1280/16rem);
             flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .cs-content {
-            width: 50%;
-            padding-bottom: clamp(3.75rem, 7.82vw, 6.25rem);
+            justify-content: flex-start;
             align-items: flex-start;
         }
 
-        .cs-topper, .cs-title {
-            text-align: left;
-            margin: 0;
+        .cs-content {
+            width: 100%;
         }
 
-        .cs-topper {
-            margin-bottom: (4/16rem);
+        .cs-picture1 {
+            font-size:~"min(1.1vw, 1em)";
+            width: (384/16em);
+            height: (509/16em);
+            flex: none;
         }
 
-        .cs-title {
-            margin-bottom: (32/16rem);
+        .cs-picture2 {
+            font-size:~"min(1.1vw, 1em)";
+            width: (383/16em);
+            height: (262/16em);
+            margin: (-26/16rem) 0 0 auto;
+            flex: none;
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #sbs-2179 {
+        .cs-container {
+            align-items: stretch;
         }
 
-        .cs-image-group {
-            /* set to inherit at Large Desktop */
-            font-size:~"min(1.2vw, 1rem)";
+        .cs-picture1 {
             height: auto;
-            order: -1;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-        }
-
-        .cs-picture {
-            height: 100%;
-            width: auto;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            position: relative;
-            z-index: 1;
-
-            img {
-                height: 100%;
-                width: auto;
-            }
-        }
-
-        .cs-flower {
-            width: 80vw;
-            max-width: (900/16rem);
+            max-height: 100%;
+            margin-bottom: (44/16rem);
         }
     }
 }
@@ -500,27 +413,22 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #sbs-2369 {
+        #sbs-2179 {
             background-color: rgba(0, 0, 0, .2);
 
             .cs-title,
-            .cs-text,
-            .cs-header, .cs-li {
+            .cs-text {
                 color: var(--bodyTextColorWhite);
             }
 
-            .cs-title {
-                &:before {
-                    opacity: .2;
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-picture {
+                img {
+                    border-color: var(--accent);
                 }
-            }
-
-            .cs-text, .cs-li {
-                opacity: .8;
-            }
-
-            .cs-wheel {
-                filter: grayscale(1) brightness(1000%) opacity(.3);
             }
         }
     }
