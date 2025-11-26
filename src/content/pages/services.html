@@ -22,7 +22,7 @@ permalink: "/services/"
     <div class="cs-container">
         <div class="cs-content">
             <span class="cs-topper">Perfect Photography at Your Doorstep</span>
-            <h2 class="cs-title">Your Wedding Memory will be More Memorable with Our Photography</h2>
+            <h1 class="cs-title">Your Wedding Memory will be More Memorable with Our Photography</h1>
             <p class="cs-text">
                 Choose from our range of photobooth options, including open-air and enclosed booths, to suit your wedding theme and style.
             </p>
@@ -65,13 +65,21 @@ permalink: "/services/"
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm1.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm1.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm1.jpg" alt="person" width="500" height="700">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | webp %}" type="image/webp">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | jpeg %}" type="image/jpeg">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | jpeg %}" type="image/jpeg">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | avif %}" type="image/avif">
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | webp %}" type="image/webp">
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 1300, height: 1700, position:'bottom'}) | jpeg %}" type="image/jpeg">
+                        <img src="{% getUrl "/assets/images/jpg/facialCard.jpg" | resize({ width: 500, height: 700, position:'bottom'}) | jpeg %}" alt="library" width="500" height="700" loading="lazy" decoding="async">
                     </picture>
                     <div class="cs-flex">
-                        <h3 class="cs-h3">Medical</h3>
+                        <h3 class="cs-h3">Facial</h3>
                     </div>
                 </a>
             </li>
@@ -79,13 +87,45 @@ permalink: "/services/"
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm2.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm2.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm2.jpg" alt="person" width="500" height="700">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | webp %}" type="image/webp">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | jpeg %}" type="image/jpeg">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | jpeg %}" type="image/jpeg">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | jpeg %}" type="image/jpeg">
+                        <img src="{% getUrl "/assets/images/jpg/yoniSteamCard.jpg" | resize({ width: 500, height: 700, position:'bottom' }) | jpeg %}" alt="library" width="500" height="700" loading="lazy" decoding="async">
                     </picture>
                     <div class="cs-flex">
-                        <h3 class="cs-h3">Cosmetic</h3>
+                        <h3 class="cs-h3">Yoni Steam</h3>
+                    </div>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | avif %}" type="image/avif">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | webp %}" type="image/webp">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | jpeg %}" type="image/jpeg">
+                            <!--Tablet Image-->
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | avif %}" type="image/avif">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | webp %}" type="image/webp">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | jpeg %}" type="image/jpeg">
+                            <!--Desktop Image-->
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | avif %}" type="image/avif">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | webp %}" type="image/webp">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 580, position:'top'}) | jpeg %}" type="image/jpeg">
+                            <img src="{% getUrl "/assets/images/jpg/hairButterCard.jpg" | resize({ width: 500, height: 700, position:'right'}) | jpeg %}" alt="library" width="500" height="700" loading="lazy" decoding="async">
+                        </picture>
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Hair Butter</h3>
                     </div>
                 </a>
             </li>
@@ -93,27 +133,21 @@ permalink: "/services/"
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
                         <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm3.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm3.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm3.jpg" alt="person" width="500" height="700">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | webp %}" type="image/webp">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | jpeg %}" type="image/jpeg">
+                        <!--Tablet Image-->
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | jpeg %}" type="image/jpeg">
+                        <!--Desktop Image-->
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 1000, height: 1400, position:'left' }) | jpeg %}" type="image/jpeg">
+                        <img src="{% getUrl "/assets/images/jpg/moroccanBathCard.jpg" | resize({ width: 500, height: 700, position:'left' }) | jpeg %}" alt="library" width="500" height="700" loading="lazy" decoding="async">
                     </picture>
                     <div class="cs-flex">
-                        <h3 class="cs-h3">Surgical</h3>
-                    </div>
-                </a>
-            </li>
-            <li class="cs-item">
-                <a href="" class="cs-link">
-                    <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm4.jpg">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm4.jpg">
-                        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/derm4.jpg" alt="person" width="500" height="700">
-                    </picture>
-                    <div class="cs-flex">
-                        <h3 class="cs-h3">Skincare</h3>
+                        <h3 class="cs-h3">Moroccan Bath</h3>
                     </div>
                 </a>
             </li>
@@ -131,6 +165,7 @@ permalink: "/services/"
     <!-- Bottom right gold graphic -->
     <img class="cs-graphic2" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gold-graphic.svg" alt="gold flake graphic" width="370" height="322" aria-hidden="true">
 </section>
+
 
 <!-- ============================================ -->
 <!--               Side By Side Pair              -->
