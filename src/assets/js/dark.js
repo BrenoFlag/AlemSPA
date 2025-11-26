@@ -24,30 +24,18 @@ function disableDarkMode() {
 	}
 }
 
-// Determines a user's dark mode preferences and applies theme
-function detectColorScheme() {
-	let theme = "light"; // Default to light theme
-
-	// 1. Check localStorage for a saved 'theme' preference
-	if (localStorage.getItem("theme")) {
-		theme = localStorage.getItem("theme");
-	}
-	// 2. If no saved preference, check browser's system preference
-	else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-		theme = "dark";
-	}
-
-	// Apply the detected theme and set the initial aria-pressed state
-	theme === "dark" ? enableDarkMode() : disableDarkMode();
+// Always initialize the site in light mode regardless of stored or system preference
+function setDefaultLightMode() {
+        disableDarkMode();
 }
 
-// Run on page load to detect and apply the theme
-detectColorScheme();
+// Run on page load to enforce the default light theme
+setDefaultLightMode();
 
 // Add event listener to the dark mode button toggle
 if (darkModeToggle) {
-	darkModeToggle.addEventListener("click", () => {
-		// On click, toggle the theme based on the current saved value
-		localStorage.getItem("theme") === "light" ? enableDarkMode() : disableDarkMode();
-	});
+        darkModeToggle.addEventListener("click", () => {
+                // On click, toggle the theme based on the current body state
+                document.body.classList.contains("dark-mode") ? disableDarkMode() : enableDarkMode();
+        });
 }
