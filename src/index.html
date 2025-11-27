@@ -362,7 +362,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | avif %}" type="image/avif">
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | webp %}" type="image/webp">
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" alt="library" width="384" height="509" loading="eager" decoding="async">
+            <img src="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" alt="library" width="384" height="509" loading="lazy" decoding="async">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">Welcome to Stitchography</span>
@@ -373,11 +373,32 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <p class="cs-text">
                 Our expert instructors give you the skills and knowledge to manage process risks and show you how to continuously make your facilities and operations more safe and reliable. PSRG training courses are available online. We have courses on-demand and live instructors for workshops and support.
             </p>
-            <a href="" class="cs-button-solid">Learn More About Us</a>
+            <a href="" class="cs-button-solid">Explore Services</a>
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/waitingRoom.jpg" | resize({ width: 766, height: 524 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 383, height: 262 }) | jpeg %}" alt="library" width="383" height="262" loading="lazy" decoding="async">
 
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding14.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding14.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/wedding14.jpg" alt="wedding" width="383" height="262">
+            </picture>
         </div>
     </div>
 </section>
+
 <!-- ============================================ -->
 <!--                 Promotions                   -->
 <!-- ============================================ -->
