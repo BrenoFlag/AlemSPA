@@ -14,14 +14,38 @@ permalink: "/booking/"
 {% block body %}
 <!-- Your page content goes inside this block; no extra <main> tag needed -->
 
+<section class="cs-booking">
+    <div class="cs-booking__inner">
+        <header class="cs-booking__header">
+            <p class="cs-booking__topper">Book Your Visit</p>
+            <h1 class="cs-booking__title">Schedule Your Session</h1>
+            <p class="cs-booking__subtitle">
+                Choose the time that works best for you. After booking, you’ll receive
+                a confirmation email with your waiver and preparation instructions.
+            </p>
+        </header>
 
-<section id="page-heading">
-    <div class="cs-container">
-        <div class="cs-content">
-            <h1 class="cs-title">Book Your Spa Session</h1>
+        <div class="cs-booking__grid">
+            <aside class="cs-booking__notes">
+                <h2 class="cs-booking__notes-title">Before you book</h2>
+                <ul class="cs-booking__list">
+                    <li>Arrive 10–15 minutes early to relax and settle in.</li>
+                    <li>Complete your digital waiver from the confirmation email.</li>
+                    <li>For packages, please book the Golden Package option only.</li>
+                </ul>
+            </aside>
+
+            <div class="cs-booking__calendly">
+                <!-- your existing Calendly inline widget goes here -->
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/breno-flag?hide_landing_page_details=1&background_color=f7f0e8&text_color=3a2823&primary_color=7f4e67" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
         </div>
     </div>
 </section>
+
 
 {% include 'sections/cta.html' %}
 <!-- Add more structured sections/cards as needed -->

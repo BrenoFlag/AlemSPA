@@ -1,0 +1,113 @@
+/* Booking Page Layout
+   ------------------- */
+
+.cs-booking {
+  background: var(--background);
+  padding: 4rem 0 4.5rem;
+}
+
+.cs-booking__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+
+.cs-booking__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.cs-booking__topper {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.cs-booking__title {
+  font-size: clamp(1.9rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  color: var(--bodyTextColor);
+  margin-bottom: 0.75rem;
+}
+
+.cs-booking__subtitle {
+  max-width: 36rem;
+  margin: 0 auto;
+  color: var(--bodyTextColorMuted);
+  font-size: 0.98rem;
+}
+
+/* Grid layout */
+
+.cs-booking__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* Two-column on larger screens */
+@media (min-width: 960px) {
+  .cs-booking__grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+    align-items: flex-start;
+  }
+}
+
+/* Notes column */
+
+.cs-booking__notes {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 24px;
+  padding: 1.75rem 1.75rem 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.04);
+}
+
+.cs-booking__notes-title {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  color: var(--bodyTextColor);
+}
+
+.cs-booking__list {
+  margin: 0;
+  padding-left: 1.15rem;
+  list-style: disc;
+  color: var(--bodyTextColorMuted);
+  font-size: 0.96rem;
+}
+
+.cs-booking__list li + li {
+  margin-top: 0.5rem;
+}
+
+/* Calendly card */
+
+.cs-booking__calendly {
+  background: var(--color-bg-alt);
+  border-radius: 24px;
+  border: 1px solid var(--color-border-soft);
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.04);
+}
+
+/* Give the iframe space to breathe on mobile */
+.cs-booking__calendly .calendly-inline-widget {
+  width: 100%;
+  min-height: 660px;
+}
+
+/* Small tweak so things don’t slam into the header on tiny screens */
+@media (max-width: 599px) {
+  .cs-booking {
+    padding-top: 3rem;
+  }
+
+  .cs-booking__calendly {
+    padding: 1.25rem;
+  }
+}
