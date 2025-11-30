@@ -125,7 +125,7 @@
 		background-color: var(--secondary); /* Plum */
 		color: var(--color-bg-alt); /* Soft Sand */
 		border: none;
-		border-radius: 6px;
+		border-radius: 9999px;
 		display: inline-block;
 		transition: background-color .25s ease, color .25s ease, border-color .25s ease;
 
@@ -137,7 +137,7 @@
 		text-align: center;
 		margin: auto;
 		min-width: (150/16rem);
-		padding: 0 (32/16rem);
+		padding: 0 (40/16rem);
 		position: relative;
 		z-index: 1;
 		/* prevents padding from adding to the width */
@@ -153,6 +153,7 @@
 			top: 0;
 			left: 0;
 			z-index: -1;
+			border-radius: 9999px;
 		}
 
 		&:hover,
@@ -1289,44 +1290,62 @@
 			color: var(--bodyTextColorWhite);
 		}
 
+
 		.cs-button-solid {
+			background-color: var(--secondary); /* Plum */
+			color: var(--color-bg-alt); /* Soft Sand */
+			border: none;
+			border-radius: 9999px;
+			display: inline-block;
+			transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+
 			font-size: (16/16rem);
 			/* 46px - 56px */
-			line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+			line-height: clamp(2.875em, 5.5vw, 3.5em);
 			text-decoration: none;
 			font-weight: 700;
 			text-align: center;
-			margin: 0;
-			color: var(--bodyTextColorWhite);
+			margin: auto;
 			min-width: (150/16rem);
-			padding: 0 (24/16rem);
-			background-color: var(--secondary);
-			border-radius: (4/16rem);
-			display: inline-block;
+			padding: 0 (40/16rem);
 			position: relative;
 			z-index: 1;
 			/* prevents padding from adding to the width */
 			box-sizing: border-box;
+
 
 			&:before {
 				content: "";
 				position: absolute;
 				height: 100%;
 				width: 0%;
-				background: #000;
 				opacity: 1;
 				top: 0;
 				left: 0;
 				z-index: -1;
-				border-radius: (4/16rem);
-				transition: width 0.3s;
+				border-radius: 9999px;
 			}
 
-			&:hover {
+			&:hover,
+			.cs-button-solid:focus {
+				background-color: #6C3F57; /* Darker Plum */
+				border: 1px solid var(--primary); /* Gold */
+				color: var(--color-bg-alt);
+
 				&:before {
 					width: 100%;
 				}
 			}
+		}
+
+		.cs-button-solid:active {
+			background-color: #5A3348; /* Even darker Plum */
+		}
+
+		.cs-button-solid:disabled {
+			background-color: #BFA1AF;
+			color: rgba(255,255,255,0.6);
+			cursor: not-allowed;
 		}
 
 		.cs-background {
