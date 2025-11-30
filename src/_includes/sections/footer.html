@@ -38,8 +38,8 @@
                     <span class="cs-header">Contact Info</span>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-link" target="_blank" rel="noopener">
-                        4321 Birch Street, Ste 140, Newport Beach, CA 92660
+                    <a href="{{ client.address.mapLink }}" class="cs-link" target="_blank" rel="noopener">
+                        {{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}, {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}
                     </a>
                 </li>
                 <li class="cs-li">
@@ -53,10 +53,13 @@
                     <span class="cs-header">Office Hours</span>
                 </li>
                 <li class="cs-li">
-                    Monday to Friday
+                    Sunday: 12:30 PM – 6:30 PM
                 </li>
                 <li class="cs-li">
-                    9am - 5pm
+                    Monday – Friday: 9:00 AM – 8:00 PM
+                </li>
+                <li class="cs-li">
+                    Saturday: 8:30 AM – 8:00 PM
                 </li>
             </ul>
         </div>

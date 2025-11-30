@@ -25,6 +25,16 @@
                 {%- endif -%}
             },
         {% endif %}
+        {% if client.hours %}
+            "openingHoursSpecification": [{%- for hour in client.hours -%}
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "{{ hour.day }}",
+                    "opens": "{{ hour.opens }}",
+                    "closes": "{{ hour.closes }}"
+                }{% if not loop.last %},{% endif %}
+            {%- endfor -%}],
+        {% endif %}
         {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
         {% if client.socials %}
             "sameAs": [{%- for platform, url in client.socials -%}
