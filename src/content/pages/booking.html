@@ -14,20 +14,45 @@ permalink: "/booking/"
 {% block body %}
 <!-- Your page content goes inside this block; no extra <main> tag needed -->
 
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1881">
+    <div class="cs-container">
+        <span class="cs-int-title">Booking</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/booking/" class="cs-link cs-active">Booking</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg">
+        <img decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg" alt="mechanic" width="3860" height="2577" aria-hidden="true">
+    </picture>
+    <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/banner-flower.svg" alt="graphic" loading="lazy" decoding="async" height="202" width="331">
+</div>
+
+
+
+
 <section class="cs-booking">
     <div class="cs-booking__inner">
         <header class="cs-booking__header">
             <p class="cs-booking__topper">Book Your Visit</p>
             <h1 class="cs-booking__title">Schedule Your Session</h1>
             <p class="cs-booking__subtitle">
-                Choose the time that works best for you. After booking, you’ll receive
-                a confirmation email with your waiver and preparation instructions.
+                Choose the time that feels right for you. Once your appointment is booked, you’ll receive a confirmation email with your digital waiver and simple preparation instructions. Every step is designed to help you arrive relaxed, informed, and ready for your healing experience.
             </p>
         </header>
 
         <div class="cs-booking__grid">
             <aside class="cs-booking__notes">
-                <h2 class="cs-booking__notes-title">Before you book</h2>
+                <h2 class="cs-booking__notes-title">After you book</h2>
                 <ul class="cs-booking__list">
                     <li>Arrive 10–15 minutes early to relax and settle in.</li>
                     <li>Complete your digital waiver from the confirmation email.</li>
@@ -38,7 +63,7 @@ permalink: "/booking/"
             <div class="cs-booking__calendly">
                 <!-- your existing Calendly inline widget goes here -->
                 <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/breno-flag?hide_landing_page_details=1&background_color=f7f0e8&text_color=3a2823&primary_color=7f4e67" style="min-width:320px;height:700px;"></div>
+                <div class="calendly-inline-widget" data-url="https://calendly.com/breno-flag?hide_landing_page_details=1&background_color=fff8f1&text_color=3a2823&primary_color=7f4e67" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 <!-- Calendly inline widget end -->
             </div>
