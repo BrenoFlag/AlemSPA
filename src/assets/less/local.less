@@ -1625,6 +1625,32 @@
                 transition: width .3s;
             }
         }
+        .cs-container {
+            width: 100%;
+            max-width: (880/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+            z-index: 1;
+        }
+
+        .cs-title {
+            max-width: none;
+        }
     }
 }
 /* Tablet - 768px */
