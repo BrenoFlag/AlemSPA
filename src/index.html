@@ -64,7 +64,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | avif %}" type="image/avif">
         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | webp %}" type="image/webp">
         <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | jpeg %}" type="image/jpeg">
-        <img src="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | jpeg %}" alt="library" width="1920" height="1000" loading="lazy" decoding="async">  </picture>
+        <img src="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | jpeg %}" alt="library" width="1920" height="1000" loading="eager" decoding="async">  </picture>
 </section>
 
 <!-- ============================================ -->

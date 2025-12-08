@@ -10,5 +10,19 @@
         </div>
     </div>
     <!--SVG Waves Background-->
-    <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fwaves-3.svg" alt="wave graphic" width="1920" height="318" loading="lazy" decoding="async" aria-hidden="true">
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" alt="library" width="1920" height="318" loading="lazy" decoding="async">
+    </picture>
 </section>
