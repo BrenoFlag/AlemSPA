@@ -28,20 +28,11 @@ permalink: "/booking/"
     </div>
     <!--Background Image-->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | avif %}" type="image/avif">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | webp %}" type="image/webp">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | jpeg %}" type="image/jpeg">
-        <!--Tablet Image-->
-        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | avif %}" type="image/avif">
-        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | webp %}" type="image/webp">
-        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | jpeg %}" type="image/jpeg">
-        <!--Desktop Image-->
-        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | avif %}" type="image/avif">
-        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | webp %}" type="image/webp">
-        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | jpeg %}" type="image/jpeg">
-        <img src="{% getUrl "/assets/images/jpg/banner.jpg" | resize({ width: 3860, height: 2577 }) | jpeg %}" alt="building" width="3860" height="2577" decoding="async">
-    </picture>
-    <img class="cs-graphic" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/banner-flower.svg" alt="graphic" loading="lazy" decoding="async" height="202" width="331">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg">
+        </picture>
 </div>
 
 

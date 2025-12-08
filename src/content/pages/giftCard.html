@@ -13,7 +13,27 @@ permalink: "/giftcard/"
 
 {% block body %}
 <!-- Your page content goes inside this block; no extra <main> tag needed -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
+<div id="banner-1881">
+    <div class="cs-container">
+        <span class="cs-int-title">Gift Card</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/reviews/" class="cs-link cs-active">Gift Card</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg">
+        <img decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/MISC/dermatology-banner.jpg" alt="mechanic" width="3860" height="2577" aria-hidden="true">
+    </picture>
+</div>
 {% include 'sections/cta.html' %}
 <!-- Add more structured sections/cards as needed -->
 {% endblock %}
