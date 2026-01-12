@@ -12,8 +12,8 @@
         playButton.classList.toggle('cs-hide', !video.paused);
     };
 
-    const attemptPlay = () => {
-        video.muted = false;
+    const attemptPlay = (shouldUnmute = false) => {
+        video.muted = !shouldUnmute;
         const playback = video.play();
         if (playback && playback.catch) {
             playback.catch(() => {
@@ -27,11 +27,12 @@
 
     video.addEventListener('play', updatePlayButtonVisibility);
     video.addEventListener('pause', updatePlayButtonVisibility);
+    video.addEventListener('ended', updatePlayButtonVisibility);
 
     if (playButton) {
         const toggleVideoPlayback = () => {
             if (video.paused) {
-                attemptPlay();
+                attemptPlay(true);
             } else {
                 video.pause();
             }
