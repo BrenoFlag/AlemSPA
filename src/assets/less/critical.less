@@ -436,6 +436,16 @@
         }
       }
 
+      video {
+        &::-webkit-media-controls,
+        &::-webkit-media-controls-panel,
+        &::-webkit-media-controls-start-playback-button,
+        &::-webkit-media-controls-play-button {
+          display: none !important;
+          -webkit-appearance: none;
+        }
+      }
+
       &:before {
         /* Overlay */
         content: "";
