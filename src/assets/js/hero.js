@@ -5,29 +5,33 @@
     const playButton = hero.querySelector('.cs-play');
     const video = hero.querySelector('video');
 
-    if (video) {
-        const attemptAutoplay = () => {
-            const playback = video.play();
-            if (playback && playback.catch) {
-                playback.catch(() => {});
-            }
-        };
+    if (!video) return;
 
-        attemptAutoplay();
-    }
+    const updatePlayButtonVisibility = () => {
+        if (!playButton) return;
+        playButton.classList.toggle('cs-hide', !video.paused);
+    };
 
-    if (video && playButton) {
-        const updatePlayButtonVisibility = () => {
-            playButton.classList.toggle('cs-hide', !video.paused);
-        };
+    const attemptPlay = () => {
+        video.muted = false;
+        const playback = video.play();
+        if (playback && playback.catch) {
+            playback.catch(() => {
+                updatePlayButtonVisibility();
+            });
+        }
+    };
 
-        updatePlayButtonVisibility();
-        video.addEventListener('play', updatePlayButtonVisibility);
-        video.addEventListener('pause', updatePlayButtonVisibility);
+    attemptPlay();
+    updatePlayButtonVisibility();
 
+    video.addEventListener('play', updatePlayButtonVisibility);
+    video.addEventListener('pause', updatePlayButtonVisibility);
+
+    if (playButton) {
         const toggleVideoPlayback = () => {
             if (video.paused) {
-                video.play();
+                attemptPlay();
             } else {
                 video.pause();
             }
