@@ -38,10 +38,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         </button>
         <picture class="cs-picture">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/clothing.jpg">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/clothing.jpg">
-            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/ecommerce/clothing.jpg" alt="clothing" width="413" height="500">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 900, height: 1200, position:'center' }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 900, height: 1200, position:'center' }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 900, height: 1200, position:'center' }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1100, height: 1467, position:'center' }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1100, height: 1467, position:'center' }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1100, height: 1467, position:'center' }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1300, height: 1700, position:'center' }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1300, height: 1700, position:'center' }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1300, height: 1700, position:'center' }) | jpeg %}" type="image/jpeg">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 650, height: 850, position:'center' }) | jpeg %}" alt="Traditional wellness ritual with herbal steam" width="650" height="850">
         </picture>
         <div class="cs-content">
             <span class="cs-header">
