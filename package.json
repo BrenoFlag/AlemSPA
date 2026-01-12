@@ -9,7 +9,8 @@
         "build:eleventy": "cross-env ELEVENTY_ENV=PROD eleventy",
         "start": "run-p watch:*",
         "build": "run-s build:*",
-		"preview": "cross-env ELEVENTY_ENV=PROD eleventy --serve"
+        "preview": "cross-env ELEVENTY_ENV=PROD eleventy --serve",
+        "test:e2e": "playwright test"
     },
     "repository": {
         "type": "git",
@@ -38,5 +39,8 @@
         "netlify-plugin-cache": "^1.0.3",
         "npm-run-all2": "^5.0.2",
         "postcss": "^8.5.6"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.55.0"
     }
 }
