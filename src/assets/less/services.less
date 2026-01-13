@@ -763,6 +763,69 @@ body.dark-mode {
       gap: (12/16rem);
     }
 
+    .cs-addons {
+      width: 100%;
+      margin-top: (20/16rem);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: (8/16rem);
+      color: var(--bodyTextColor);
+    }
+
+    .cs-addons-label {
+      font-size: (14/16rem);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+    }
+
+    .cs-addons-list {
+      list-style: none;
+      margin: 0 0 (8/16rem);
+      padding: 0;
+      display: grid;
+      gap: (6/16rem);
+    }
+
+    .cs-addons-list li {
+      font-size: (14/16rem);
+      line-height: 1.5em;
+      position: relative;
+      padding-left: (16/16rem);
+
+      &::before {
+        content: '';
+        width: (6/16rem);
+        height: (6/16rem);
+        border-radius: 50%;
+        background-color: var(--secondary);
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+        transform: translateY(-50%);
+      }
+    }
+
+    .cs-addons-link {
+      color: var(--secondary);
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: (6/16rem);
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    .cs-addons-note {
+      margin: 0;
+      font-size: (13/16rem);
+      color: var(--bodyTextColor);
+      opacity: 0.8;
+    }
+
     .cs-li {
       font-size: var(--bodyFontSize);
       list-style: none;
