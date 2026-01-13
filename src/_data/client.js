@@ -1,3 +1,48 @@
+const hours = [
+    {
+        day: "Sunday",
+        display: "12:30 PM – 6:30 PM",
+        opens: "12:30",
+        closes: "18:30",
+    },
+    {
+        day: "Monday",
+        display: "9:00 AM – 8:00 PM",
+        opens: "09:00",
+        closes: "20:00",
+    },
+    {
+        day: "Tuesday",
+        display: "Closed",
+        opens: null,
+        closes: null,
+    },
+    {
+        day: "Wednesday",
+        display: "9:00 AM – 8:00 PM",
+        opens: "09:00",
+        closes: "20:00",
+    },
+    {
+        day: "Thursday",
+        display: "9:00 AM – 8:00 PM",
+        opens: "09:00",
+        closes: "20:00",
+    },
+    {
+        day: "Friday",
+        display: "9:00 AM – 8:00 PM",
+        opens: "09:00",
+        closes: "20:00",
+    },
+    {
+        day: "Saturday",
+        display: "8:30 AM – 8:00 PM",
+        opens: "08:30",
+        closes: "20:00",
+    },
+];
+
 module.exports = {
     name: "Code Stitch Web Designs",
     email: "help@codestitch.app",
@@ -12,50 +57,8 @@ module.exports = {
         country: "US",
         mapLink: "https://maps.google.com/?q=5470+Memorial+Dr,+Stone+Mountain,+GA+30083",
     },
-    hours: [
-        {
-            day: "Sunday",
-            display: "12:30 PM – 6:30 PM",
-            opens: "12:30",
-            closes: "18:30",
-        },
-        {
-            day: "Monday",
-            display: "9:00 AM – 8:00 PM",
-            opens: "09:00",
-            closes: "20:00",
-        },
-        {
-            day: "Tuesday",
-            display: "9:00 AM – 8:00 PM",
-            opens: "09:00",
-            closes: "20:00",
-        },
-        {
-            day: "Wednesday",
-            display: "9:00 AM – 8:00 PM",
-            opens: "09:00",
-            closes: "20:00",
-        },
-        {
-            day: "Thursday",
-            display: "9:00 AM – 8:00 PM",
-            opens: "09:00",
-            closes: "20:00",
-        },
-        {
-            day: "Friday",
-            display: "9:00 AM – 8:00 PM",
-            opens: "09:00",
-            closes: "20:00",
-        },
-        {
-            day: "Saturday",
-            display: "8:30 AM – 8:00 PM",
-            opens: "08:30",
-            closes: "20:00",
-        },
-    ],
+    hours,
+    schemaHours: hours.filter((hour) => hour.opens && hour.closes),
     socials: {
         facebook: "https://www.facebook.com/",
         instagram: "https://www.instagram.com/",

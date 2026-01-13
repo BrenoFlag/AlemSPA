@@ -25,8 +25,9 @@
                 {%- endif -%}
             },
         {% endif %}
-        {% if client.hours %}
-            "openingHoursSpecification": [{%- for hour in client.hours -%}
+        {% set businessHours = client.schemaHours or client.hours %}
+        {% if businessHours %}
+            "openingHoursSpecification": [{%- for hour in businessHours -%}
                 {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": "{{ hour.day }}",

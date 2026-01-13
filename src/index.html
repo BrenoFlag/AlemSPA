@@ -22,49 +22,94 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <link rel="stylesheet" href="/assets/css/local.css"/>
     {% endif %}
 
+    <script defer src="/assets/js/hero.js"></script>
+    <script defer src="/assets/js/modal.js"></script>
+
     <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
     <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
     <!-- {% include "components/home-schema.html" %} -->
 {% endblock %}
 
 {% block body %}
+<div id="cs-modal-1605" style="z-index: -10">
+    <div class="cs-wrapper">
+        <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="clothing" width="24" height="24" aria-hidden="true">
+        </button>
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 900, height: 1200, position:'center' }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 900, height: 1200, position:'center' }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 900, height: 1200, position:'center' }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1100, height: 1467, position:'center' }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1100, height: 1467, position:'center' }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1100, height: 1467, position:'center' }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1300, height: 1700, position:'center' }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1300, height: 1700, position:'center' }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 1300, height: 1700, position:'center' }) | jpeg %}" type="image/jpeg">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/png/modalmage.png" | resize({ width: 650, height: 850, position:'center' }) | jpeg %}" alt="Traditional wellness ritual with herbal steam" width="650" height="850">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-header">
+                Stay Connected With Alem Spa
+            </span>
+            <p class="cs-text">
+                Join our mailing list to stay in touch with Alem Spa & Weyba Tis. From seasonal rituals and spa updates to moments of inspiration rooted in tradition and feminine wellness, this is where we share what matters.
+            </p>
+            <!--If you remove the form because you don't want it, make sure you remove "CSsubmitButton.addEventListener('click', handleClose);" in the JS code. It is adding an event listener on the submit button, if you remove the submit button JS freaks out that its trying to add an event listener to something that isn't there and won't work -->
+            <form class="cs-form" name="Modal Form" method="post" netlify>
+                <input class="cs-input" type="text" id="cs-first-name-1605" name="first-name" placeholder="First Name">
+                <input class="cs-input" type="text" id="cs-last-name-1605" name="last-name" placeholder="Last Name">
+                <input class="cs-input" type="email" id="cs-email-1605" name="email" placeholder="Email Address">
+                <button id="cs-submit-1605" class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
+            </form>
+            <div class="cs-social">
+                <a href="https://www.facebook.com/share/1UCpHmi5TR/?mibextid=wwXIfr" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+                <a href="https://www.instagram.com/alem_spa_weyba_tis/?igsh=NnNzZzJlaHN6NnIx" class="cs-social-link">
+                    <img class="cs-social-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg" alt="logo" width="12" height="12" aria-hidden="true" decoding="async">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero-998">
+<section id="hero-2042">
     <div class="cs-container">
         <div class="cs-content">
-            <h1 class="cs-topper">Women’s Wellness</h1>
-            <!--Logo-->
-            <picture class="cs-logo">
-                <source media="(max-width: 600px)" srcset="/assets/images/AlemSPALogoImprov.webp">
-                <source media="(min-width: 601px)" srcset="/assets/images/AlemSPALogoImprov.webp">
-                <img decoding="async" src="/assets/images/AlemSPALogoImprov.webp" alt="Stitch House Restaurant" width="614" height="166">
-            </picture>
+            <span class="cs-topper">Traditional Healing</span>
+            <h1 class="cs-title">Holistic Women’s Wellness Spa in Stone Mountain, GA</h1>
             <p class="cs-text">
                 Experience Ethiopian and Moroccan wellness rituals that calm the mind, soften the body, and renew your feminine energy.
             </p>
-            <a href="/booking/" class="cs-button-solid">Book An Appointment</a>
+
+            <!--
+            <div class="cs-button-group">
+                <a href="" class="cs-button-solid">Book Now</a>
+            </div>
+            -->
         </div>
+        <button class="cs-play" aria-label="click to play video">
+            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg" alt="play icon" width="24" height="24" aria-hidden="true" decoding="async">
+        </button>
     </div>
-    <!--Background Image-->
-    <!--Image is also set as background image in CSS at 1400px for parallax effect-->
-    <picture class="cs-background">
-        <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | avif %}" type="image/avif">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | webp %}" type="image/webp">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | jpeg %}" type="image/jpeg">
-        <!--Tablet Image-->
-        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | avif %}" type="image/avif">
-        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | webp %}" type="image/webp">
-        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | jpeg %}" type="image/jpeg">
-        <!--Desktop Image-->
-        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | avif %}" type="image/avif">
-        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | webp %}" type="image/webp">
-        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | jpeg %}" type="image/jpeg">
-        <img src="{% getUrl "/assets/images/jpg/hero.jpg" | resize({ width: 1920, height: 1000}) | jpeg %}" alt="library" width="1920" height="1000" loading="eager" decoding="async">  </picture>
+
+    <div class="cs-video-wrapper">
+        <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
+        <video loading="lazy" autoplay muted playsinline preload="auto" src="/assets/videos/heroVideo.mp4"></video>
+        <!-- <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png" alt="body builder" width="630" height="877">
+        </picture> -->
+    </div>
 </section>
 
 <!-- ============================================ -->
@@ -293,44 +338,45 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <ul class="cs-card-group">
             <li class="cs-item">
                 <p class="cs-item-text">
-                    Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sitvoluptatem accusantium doloremque laudantium.
+                    From the moment I walked into Alem Spa, I knew I was in for something special. The space felt warm, intentional, and deeply welcoming, nothing rushed or generic. Every step felt thoughtful and personalized, and I left feeling lighter, deeply relaxed, and genuinely restored.
                 </p>
                 <picture class="cs-wrapper">
                     <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="20" height="16">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">
-                        Britney Allison
+                        Morgan C.
                     </span>
                 </div>
             </li>
             <li class="cs-item">
                 <p class="cs-item-text">
-                    Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sitvoluptatem accusantium doloremque laudantium.
+                    I visited Alem Spa for the Golden Package, and the experience was incredible from start to finish. The ambiance was calming, the care was gentle yet thorough, and every detail felt intentional. I left feeling refreshed from head to toe, and signed up for a membership the same day.
                 </p>
                 <picture class="cs-wrapper">
                     <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="20" height="16">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">
-                        Britney Allison
+                        Adhama C.
                     </span>
                 </div>
             </li>
             <li class="cs-item">
                 <p class="cs-item-text">
-                    Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sitvoluptatem accusantium doloremque laudantium.
+                    My girlfriends and I had an amazing spa day at Alem Spa. The treatments were deeply relaxing, my skin felt incredibly soft, and the entire experience felt warm and welcoming. From the moment we walked in, we felt comfortable, cared for, and completely at ease.
                 </p>
                 <picture class="cs-wrapper">
                     <img class="cs-quote" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/quote-gold.svg" alt="quote" width="20" height="16">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">
-                        Britney Allison
+                        Catherine M.
                     </span>
                 </div>
             </li>
         </ul>
+        <a href="/reviews/" class="cs-button-solid">Read Full Client Stories</a>
     </div>
 </section>
 <!-- ============================================ -->
@@ -341,29 +387,30 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     <div class="cs-container">
         <picture class="cs-picture cs-picture1">
             <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" type="image/jpeg">
             <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" type="image/jpeg">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" type="image/jpeg">
             <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/jpg/alemHeadshot1.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" alt="library" width="384" height="509" loading="lazy" decoding="async">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/jpg/meetAlem.jpg" | resize({ width: 384, height: 509 }) | jpeg %}" alt="library" width="384" height="509" loading="lazy" decoding="async">
         </picture>
         <div class="cs-content">
             <span class="cs-topper">The Women Behind Alem Spa</span>
             <h2 class="cs-title">Alem’s Story — Healing Through Culture, Care, and Tradition</h2>
             <p class="cs-text">
-                Alem created this spa to share the traditional healing rituals she grew up with in Ethiopia — practices rooted in warmth, purity, and feminine renewal.
-                Her journey began long before AlemSpa existed, shaped by family traditions, cultural wisdom, and a deep desire to help women feel soft, cleansed, and reconnected with their inner peace.
+                Alem created this spa to share the traditional healing rituals she grew up with in Ethiopia—practices rooted in warmth, purity, feminine renewal, and deep cultural care. Her journey began long before AlemSpa existed, shaped by family traditions and refined through decades of professional experience.
             </p>
             <p class="cs-text">
-                With a gentle presence and a devotion to natural wellness, Alem brings authenticity to every treatment, from the Ethiopian Yoni Smoke ceremony to the Moroccan Bath experience.
-                Every woman who steps into her care is welcomed with respect, tenderness, and the intention to restore balance to both body and spirit.
+                Alem is a licensed beauty aesthetician who studied beauty and cosmetology in London and has been practicing since 1999. She has worked in spa environments across the UK, Africa, Ethiopia, and the United States, gaining extensive experience in both hands-on treatments and spa management.
+            </p>
+            <p class="cs-text">
+                With a gentle presence and a deep respect for natural wellness, Alem brings authenticity to every service she offers, from the Ethiopian Yoni Smoke (Weyba Tis) ceremony to the traditional Moroccan Bath experience. Every woman who enters her care is welcomed with intention, tenderness, and the goal of restoring balance to both body and spirit.
             </p>
             <a href="/services/" class="cs-button-solid">Explore Services</a>
             <picture class="cs-picture cs-picture2">
