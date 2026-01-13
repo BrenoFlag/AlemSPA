@@ -1343,3 +1343,76 @@ body.dark-mode {
     }
   }
 }
+
+/*-- -------------------------- -->
+<---     Service Card Rhythm    -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+  .service-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: (16/16rem);
+  }
+
+  .service-card__description {
+    display: flex;
+    flex-direction: column;
+    gap: (16/16rem);
+  }
+
+  .service-card__section--includes,
+  .service-card__section--cta {
+    margin-top: (8/16rem);
+  }
+
+  .service-card__content .cs-h3,
+  .service-card__content .cs-tier-title {
+    margin: 0;
+  }
+
+  .service-card__content .cs-text,
+  .service-card__content .cs-text-large {
+    margin: 0;
+  }
+
+  .service-card__meta-list {
+    margin: 0;
+    gap: (8/16rem);
+  }
+
+  .service-card__includes {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: (8/16rem);
+  }
+
+  .service-card__label {
+    font-size: (14/16rem);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .service-card__list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: (8/16rem);
+  }
+
+  .service-card__includes .service-card__label + .service-card__list,
+  .service-card__includes .cs-addons-label + .cs-addons-list {
+    margin-top: (8/16rem);
+  }
+
+  .service-card__cta .cs-button-solid,
+  .service-card__cta .acuity-embed-button {
+    margin: 0;
+  }
+
+  .service-card__membership .membership-line {
+    margin: 0;
+  }
+}
