@@ -189,11 +189,9 @@
         .cs-card-group {
             padding: 0;
             margin: 0;
-            display: grid;
-            column-gap: (20/16rem);
-            row-gap: (64/16rem);
             width: 100%;
-            grid-template-columns: repeat(12, 1fr);
+            column-count: 1;
+            column-gap: (20/16rem);
         }
 
 
@@ -260,12 +258,11 @@
 
 
         .cs-item {
-            grid-column: span 12;
             text-align: left;
             list-style: none;
             width: 100%;
             /* pushes up the same amount the cs-item-img overlaps the card */
-            margin: (40/16rem) 0 0 0;
+            margin: (40/16rem) 0 (64/16rem);
             /* Padding L & R - 16px - 32px */
             padding: (60/16rem) clamp(1rem, 3.2vw, 2rem) 0;
             /* 32px - 40px */
@@ -274,10 +271,11 @@
             border-radius: (4/16rem);
             background: #fff;
             position: relative;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            align-items: center;
+            display: inline-block;
+            width: 100%;
+            break-inside: avoid;
+            page-break-inside: avoid;
+            -webkit-column-break-inside: avoid;
             /* Prevents padding from affecting height & width */
             box-sizing: border-box;
 
@@ -343,8 +341,8 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #reviews-67 {
-        .cs-item {
-            grid-column: span 6;
+        .cs-card-group {
+            column-count: 2;
         }
     }
 }
@@ -352,8 +350,8 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #reviews-67 {
-        .cs-item {
-            grid-column: span 4;
+        .cs-card-group {
+            column-count: 3;
         }
     }
 }
