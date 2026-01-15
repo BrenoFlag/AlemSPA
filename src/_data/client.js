@@ -1,15 +1,15 @@
 const hours = [
     {
         day: "Sunday",
-        display: "12:30 PM – 6:30 PM",
-        opens: "12:30",
-        closes: "18:30",
+        display: "12:00 PM – 6:00 PM",
+        opens: "12:00",
+        closes: "18:00",
     },
     {
         day: "Monday",
-        display: "9:00 AM – 8:00 PM",
+        display: "9:00 AM – 6:00 PM",
         opens: "09:00",
-        closes: "20:00",
+        closes: "18:00",
     },
     {
         day: "Tuesday",
@@ -19,27 +19,27 @@ const hours = [
     },
     {
         day: "Wednesday",
-        display: "9:00 AM – 8:00 PM",
+        display: "9:00 AM – 6:00 PM",
         opens: "09:00",
-        closes: "20:00",
+        closes: "18:00",
     },
     {
         day: "Thursday",
-        display: "9:00 AM – 8:00 PM",
+        display: "9:00 AM – 6:00 PM",
         opens: "09:00",
-        closes: "20:00",
+        closes: "18:00",
     },
     {
         day: "Friday",
-        display: "9:00 AM – 8:00 PM",
-        opens: "09:00",
-        closes: "20:00",
+        display: "8:00 AM – 7:00 PM",
+        opens: "08:00",
+        closes: "19:00",
     },
     {
         day: "Saturday",
-        display: "8:30 AM – 8:00 PM",
-        opens: "08:30",
-        closes: "20:00",
+        display: "8:00 AM – 7:00 PM",
+        opens: "08:00",
+        closes: "19:00",
     },
 ];
 

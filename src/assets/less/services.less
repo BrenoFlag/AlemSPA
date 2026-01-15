@@ -724,6 +724,37 @@ body.dark-mode {
           margin-bottom: (32/16rem);
         }
       }
+
+      .cs-button-solid {
+        margin: (24/16rem) 0 0;
+      }
+    }
+
+    .cs-tier {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cs-tier .acuity-embed-button {
+      margin-left: 0;
+      margin-right: 0;
+      align-self: flex-start;
+    }
+
+    .cs-tier-title {
+      font-size: (20/16rem);
+      line-height: 1.3em;
+      font-weight: 700;
+      margin: 0 0 (12/16rem);
+      color: var(--bodyTextColor);
+    }
+
+    .cs-tier-divider {
+      width: 100%;
+      border-top: 1px solid var(--color-border-soft);
+      margin: (24/16rem) 0;
     }
 
     .cs-flex {
@@ -761,6 +792,69 @@ body.dark-mode {
       flex-direction: column;
       align-items: flex-start;
       gap: (12/16rem);
+    }
+
+    .cs-addons {
+      width: 100%;
+      margin-top: (20/16rem);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: (8/16rem);
+      color: var(--bodyTextColor);
+    }
+
+    .cs-addons-label {
+      font-size: (14/16rem);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+    }
+
+    .cs-addons-list {
+      list-style: none;
+      margin: 0 0 (8/16rem);
+      padding: 0;
+      display: grid;
+      gap: (6/16rem);
+    }
+
+    .cs-addons-list li {
+      font-size: (14/16rem);
+      line-height: 1.5em;
+      position: relative;
+      padding-left: (16/16rem);
+
+      &::before {
+        content: '';
+        width: (6/16rem);
+        height: (6/16rem);
+        border-radius: 50%;
+        background-color: var(--secondary);
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+        transform: translateY(-50%);
+      }
+    }
+
+    .cs-addons-link {
+      color: var(--secondary);
+      font-weight: 600;
+      text-decoration: none;
+      margin-left: (6/16rem);
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    .cs-addons-note {
+      margin: 0;
+      font-size: (13/16rem);
+      color: var(--bodyTextColor);
+      opacity: 0.8;
     }
 
     .cs-li {
@@ -1074,6 +1168,36 @@ body.dark-mode {
       }
     }
 
+    .cs-text-balanced {
+      margin: (12/16rem) 0;
+    }
+
+    .cs-addons-list {
+      list-style: none;
+      margin: 0 0 (8/16rem);
+      padding: 0;
+      display: grid;
+      gap: (6/16rem);
+    }
+
+    .cs-addons-list li {
+      font-size: (14/16rem);
+      line-height: 1.5em;
+      position: relative;
+      padding-left: (16/16rem);
+
+      &::before {
+        content: '';
+        width: (6/16rem);
+        height: (6/16rem);
+        border-radius: 50%;
+        background-color: var(--secondary);
+        position: absolute;
+        left: 0;
+        top: 0.5em;
+        transform: translateY(-50%);
+      }
+    }
 
     .cs-button-solid {
       background-color: var(--secondary); /* Plum */
@@ -1089,7 +1213,7 @@ body.dark-mode {
       text-decoration: none;
       font-weight: 700;
       text-align: center;
-      margin: auto;
+      margin: (24/16rem) 0 0;
       min-width: (150/16rem);
       padding: 0 (40/16rem);
       position: relative;
@@ -1217,5 +1341,78 @@ body.dark-mode {
         opacity: 0.6;
       }
     }
+  }
+}
+
+/*-- -------------------------- -->
+<---     Service Card Rhythm    -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+  .service-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: (16/16rem);
+  }
+
+  .service-card__description {
+    display: flex;
+    flex-direction: column;
+    gap: (16/16rem);
+  }
+
+  .service-card__section--includes,
+  .service-card__section--cta {
+    margin-top: (8/16rem);
+  }
+
+  .service-card__content .cs-h3,
+  .service-card__content .cs-tier-title {
+    margin: 0;
+  }
+
+  .service-card__content .cs-text,
+  .service-card__content .cs-text-large {
+    margin: 0;
+  }
+
+  .service-card__meta-list {
+    margin: 0;
+    gap: (8/16rem);
+  }
+
+  .service-card__includes {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: (8/16rem);
+  }
+
+  .service-card__label {
+    font-size: (14/16rem);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .service-card__list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: (8/16rem);
+  }
+
+  .service-card__includes .service-card__label + .service-card__list,
+  .service-card__includes .cs-addons-label + .cs-addons-list {
+    margin-top: (8/16rem);
+  }
+
+  .service-card__cta .cs-button-solid,
+  .service-card__cta .acuity-embed-button {
+    margin: 0;
+  }
+
+  .service-card__membership .membership-line {
+    margin: 0;
   }
 }
