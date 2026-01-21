@@ -36,39 +36,36 @@ permalink: "/booking/"
 </div>
 
 
+<iframe src="https://app.acuityscheduling.com/schedule.php?owner=35860310&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0" allow="payment"></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
 
-<section class="cs-booking">
-    <div class="cs-booking__inner">
-        <header class="cs-booking__header">
-            <p class="cs-booking__topper">Book Your Visit</p>
-            <h1 class="cs-booking__title">Schedule Your Session</h1>
-            <p class="cs-booking__subtitle">
-                Choose the time that feels right for you. Once your appointment is booked, you’ll receive a confirmation email with your digital waiver and simple preparation instructions. Every step is designed to help you arrive relaxed, informed, and ready for your healing experience.
-            </p>
-        </header>
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
 
-        <div class="cs-booking__grid">
-            <aside class="cs-booking__notes">
-                <h2 class="cs-booking__notes-title">A Few Things to Know</h2>
-                <ul class="cs-booking__list">
-                    <li>Please arrive 10–15 minutes early to settle in.</li>
-                    <li>Complete your digital waiver using the link in your confirmation email.</li>
-                    <li>For packages, select the Golden Package option only.</li>
-                    <li>If you enjoy regular self-care, explore our monthly membership for consistent savings.</li>
-                </ul>
-            </aside>
-
-            <div class="cs-booking__calendly">
-                <!-- your existing acuity inline widget goes here -->
-                <!-- acuity inline widget begin -->
-                <iframe src="https://app.acuityscheduling.com/schedule.php?owner=35860310&ref=embedded_csp" title="Schedule Appointment" width="100%" height="800" frameBorder="0" allow="payment"></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
-                <!-- acuity inline widget end -->
-            </div>
+<section id="cta-697">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Make relaxation part of your routine!</h2>
+            <a href="/booking/" class="cs-button-solid">Get our Membership</a>
         </div>
     </div>
+    <!--SVG Waves Background-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl "/assets/images/jpg/cta.jpg" | resize({ width: 1920, height: 318}) | jpeg %}" alt="library" width="1920" height="318" loading="lazy" decoding="async">
+    </picture>
 </section>
 
-
-{% include 'sections/cta.html' %}
 <!-- Add more structured sections/cards as needed -->
 {% endblock %}
