@@ -1,0 +1,41 @@
+---
+title: "Gift Card Purchase Confirmed | AlemSpa"
+description: "Your AlemSpa gift card has been successfully purchased."
+permalink: "/giftcard/success/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/giftCard.css">
+{% endblock %}
+
+{% block body %}
+
+<section id="gc-result-page">
+    <div class="gc-result-container">
+
+        <div class="gc-result-icon gc-result-icon--success" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+            </svg>
+        </div>
+
+        <span class="gc-result-topper">Payment Successful</span>
+        <h1 class="gc-result-title">Your Gift Card is On Its Way!</h1>
+        <p class="gc-result-text">
+            Thank you for your purchase. Your AlemSpa gift card has been created and the recipient will receive their beautifully designed gift card by email shortly — complete with their unique redemption code.
+        </p>
+        <p class="gc-result-text">
+            You should also receive an order confirmation to the email you provided. If you have any questions, reach out to us at <a href="mailto:alemb2spa@gmail.com" class="gc-result-link">alemb2spa@gmail.com</a>.
+        </p>
+
+        <div class="gc-result-actions">
+            <a href="/" class="cs-button-solid gc-result-btn">Back to Home</a>
+            <a href="/booking/" class="gc-result-btn-outline">Book Your Own Appointment</a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

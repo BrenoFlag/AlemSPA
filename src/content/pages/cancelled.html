@@ -1,0 +1,42 @@
+---
+title: "Purchase Cancelled | AlemSpa"
+description: "Your gift card purchase was cancelled. No payment was taken."
+permalink: "/giftcard/cancelled/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="/assets/css/giftCard.css">
+{% endblock %}
+
+{% block body %}
+
+<section id="gc-result-page">
+    <div class="gc-result-container">
+
+        <div class="gc-result-icon gc-result-icon--cancel" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </div>
+
+        <span class="gc-result-topper">Purchase Cancelled</span>
+        <h1 class="gc-result-title">No Problem — Nothing Was Charged</h1>
+        <p class="gc-result-text">
+            Your payment was cancelled and no charge was made. If you changed your mind or ran into an issue, you're welcome to try again whenever you're ready.
+        </p>
+        <p class="gc-result-text">
+            If you experienced a technical problem, please contact us at <a href="mailto:alemb2spa@gmail.com" class="gc-result-link">alemb2spa@gmail.com</a> and we'll help you out.
+        </p>
+
+        <div class="gc-result-actions">
+            <a href="/giftcard/" class="cs-button-solid gc-result-btn">Try Again</a>
+            <a href="/" class="gc-result-btn-outline">Back to Home</a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
