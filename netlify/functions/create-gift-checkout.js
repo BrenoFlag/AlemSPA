@@ -1,44 +1,30 @@
 /**
  * Netlify Function: create-gift-checkout
  * Creates a Stripe Checkout Session for gift card purchases
- *
- * POST /.netlify/functions/create-gift-checkout
+ * LIVE MODE — updated April 29, 2026
  */
 
 const Stripe = require('stripe');
 
 exports.handler = async function (event) {
-    // Only allow POST
     if (event.httpMethod !== 'POST') {
-        return {
-            statusCode: 405,
-            body: JSON.stringify({ error: 'Method not allowed' })
-        };
+        return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
     }
 
-    // Parse body
     let payload;
     try {
         payload = JSON.parse(event.body);
     } catch (err) {
-        return {
-            statusCode: 400,
-            body: JSON.stringify({ error: 'Invalid request body' })
-        };
+        return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request body' }) };
     }
 
-    // Validate required fields
     const required = ['service_key', 'price_id', 'buyer_name', 'buyer_email', 'recipient_name', 'recipient_email'];
     for (const field of required) {
         if (!payload[field] || !payload[field].toString().trim()) {
-            return {
-                statusCode: 400,
-                body: JSON.stringify({ error: `Missing required field: ${field}` })
-            };
+            return { statusCode: 400, body: JSON.stringify({ error: `Missing required field: ${field}` }) };
         }
     }
 
-    // Basic email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(payload.buyer_email)) {
         return { statusCode: 400, body: JSON.stringify({ error: 'Invalid buyer email address' }) };
@@ -47,21 +33,18 @@ exports.handler = async function (event) {
         return { statusCode: 400, body: JSON.stringify({ error: 'Invalid recipient email address' }) };
     }
 
-    // Validate price_id belongs to our known products (security check)
+    // LIVE price IDs
     const allowedPriceIds = [
-        'price_1TNx1yAgu1eEQTjlqGF1R4tL', // Golden Package
-        'price_1TNx3RAgu1eEQTjlqaPhnuJH', // Moroccan Bath
-        'price_1TNx4LAgu1eEQTjlUkguty9q', // Smoke Bath Herbal Detox
-        'price_1TNx57Agu1eEQTjlIolcsxtt', // Smoke Bath Steam Only
-        'price_1TNx2NAgu1eEQTjlEETTWX3b', // Facial
-        'price_1TNx2xAgu1eEQTjlX2n2CiZ5', // Hair Butter
+        'price_1TRbkPALHDTqOlAGljs9T0Yu', // Golden Package
+        'price_1TRbk4ALHDTqOlAGeCcmuhJW', // Facial
+        'price_1TRbjBALHDTqOlAGJY7dUK4z', // Hair Butter
+        'price_1TRbinALHDTqOlAGH023BiVL', // Moroccan Bath
+        'price_1TRbiGALHDTqOlAGUohaBa7O', // Smoke Bath Herbal Detox
+        'price_1TRbhRALHDTqOlAGTRVF4Gab', // Smoke Bath Steam Only
     ];
 
     if (!allowedPriceIds.includes(payload.price_id)) {
-        return {
-            statusCode: 400,
-            body: JSON.stringify({ error: 'Invalid product selection' })
-        };
+        return { statusCode: 400, body: JSON.stringify({ error: 'Invalid product selection' }) };
     }
 
     const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -70,12 +53,7 @@ exports.handler = async function (event) {
     try {
         const session = await stripe.checkout.sessions.create({
             mode: 'payment',
-            line_items: [
-                {
-                    price: payload.price_id,
-                    quantity: 1
-                }
-            ],
+            line_items: [{ price: payload.price_id, quantity: 1 }],
             customer_email: payload.buyer_email,
             metadata: {
                 service_key:     payload.service_key.trim(),
