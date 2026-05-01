@@ -46,8 +46,10 @@ const hours = [
 module.exports = {
     name: "Code Stitch Web Designs",
     email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    phoneForTel: "404-338-8620",
+    phoneFormatted: "(404) 338-8620",
+    phoneForTel1: "770-688-4065",
+    phoneFormatted1: "(770) 688-4065",
     address: {
         lineOne: "5470 Memorial Dr",
         lineTwo: "",
