@@ -79,6 +79,12 @@ bodyClass: "contact-page"
                 </form>
             </div>
             <div class="cs-right-section">
+                <!--Phone-->
+                <span class="cs-header">Phone</span>
+                <a class="cs-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
+                <!--Phone-->
+                <span class="cs-header">Phone</span>
+                <a class="cs-link" href="tel:{{ client.phoneForTel1 }}">{{ client.phoneFormatted1 }}</a>
                 <!--Address-->
                 <span class="cs-header">Address</span>
                 <a class="cs-link" href="{{ client.address.mapLink }}">
