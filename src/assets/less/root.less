@@ -720,6 +720,40 @@
 		.cs-button-solid {
 			display: none;
 		}
+
+		.cs-mobile-book-now {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 3rem;
+			padding: 0 1.5rem;
+			margin: 0;
+			position: fixed;
+			right: 1rem;
+			bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+			z-index: 950;
+			box-shadow: 0 10px 24px rgba(58, 40, 35, 0.25);
+			opacity: 0;
+			transform: translateY(0.5rem);
+			animation: cs-float-cta-in .35s ease forwards;
+			-webkit-tap-highlight-color: transparent;
+
+			&:active {
+				transform: translateY(1px);
+			}
+
+			&:focus-visible {
+				outline: 2px solid var(--primary);
+				outline-offset: 3px;
+			}
+		}
+	}
+}
+
+@keyframes cs-float-cta-in {
+	to {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
 
@@ -983,6 +1017,10 @@
 				}
 			}
 		}
+	}
+
+	.cs-mobile-book-now {
+		display: none !important;
 	}
 }
 
